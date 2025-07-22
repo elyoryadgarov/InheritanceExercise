@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inheritance
 {
@@ -28,12 +29,44 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            var Chicken = new Bird();
+            Chicken.CountryOfOrigin = "America";
+            Chicken.Name = "Chick";
+            Chicken.Age = 2;
+            Chicken.Color = "Red";
+            Chicken.Gender = "Male";
+            Chicken.FoodType = "Seeds";
+            Chicken.IsFlies = "Yes";
+            Chicken.LifeStyle = "Day Time";
+
+            static void AnimalDetails(Object obj)
+            {
+                foreach (var Item in obj.GetType().GetProperties())
+                {
+                    Console.WriteLine($"{Item.Name} : {Item.GetValue(obj)}");
+                }
+            }
+            Console.WriteLine("Below Details of Chicken!");
+            AnimalDetails(Chicken);
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
+             *
+             * Creatively display the class member values
              */
+            var Croc = new Reptile();
+            Croc.TypeOfReptile = "Crocodile";
+            Croc.Color = "Green";
+            Croc.Gender = "Female";
+            Croc.Age = 7;
+            Croc.IsSwimming = "Yes";
+            Croc.Name = "Crunch";
+            Croc.Weight = 341.5;
+            Croc.BodyType = "Distinctive";
+            
+            Console.WriteLine("\nBelow Details of Crocodile!");
+            AnimalDetails(Croc);
+
         }
     }
 }
