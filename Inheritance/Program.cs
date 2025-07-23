@@ -29,15 +29,15 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
-            var Chicken = new Bird();
-            Chicken.CountryOfOrigin = "America";
-            Chicken.Name = "Chick";
-            Chicken.Age = 2;
-            Chicken.Color = "Red";
-            Chicken.Gender = "Male";
-            Chicken.FoodType = "Seeds";
-            Chicken.IsFlies = "Yes";
-            Chicken.LifeStyle = "Day Time";
+            var chicken = new Bird();
+            chicken.CountryOfOrigin = "America";
+            chicken.Name = "Chick";
+            chicken.Age = 2;
+            chicken.Color = "Red";
+            chicken.Gender = "Male";
+            chicken.FoodType = "Seeds";
+            chicken.IsFlies = "Yes";
+            chicken.LifeStyle = "Day Time";
 
             static void AnimalDetails(Object obj)
             {
@@ -47,25 +47,25 @@ namespace Inheritance
                 }
             }
             Console.WriteLine("Below Details of Chicken!");
-            AnimalDetails(Chicken);
+            AnimalDetails(chicken);
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *
              * Creatively display the class member values
              */
-            var Croc = new Reptile();
-            Croc.TypeOfReptile = "Crocodile";
-            Croc.Color = "Green";
-            Croc.Gender = "Female";
-            Croc.Age = 7;
-            Croc.IsSwimming = "Yes";
-            Croc.Name = "Crunch";
-            Croc.Weight = 341.5;
-            Croc.BodyType = "Distinctive";
+            var croc = new Reptile();
+            croc.TypeOfReptile = "Crocodile";
+            croc.Color = "Green";
+            croc.Gender = "Female";
+            croc.Age = 7;
+            croc.IsSwimming = "Yes";
+            croc.Name = "Crunch";
+            croc.Weight = 341.5;
+            croc.BodyType = "Distinctive";
             
             Console.WriteLine("\nBelow Details of Crocodile!");
-            AnimalDetails(Croc);
+            AnimalDetails(croc);
 
         }
     }
